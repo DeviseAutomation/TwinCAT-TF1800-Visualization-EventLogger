@@ -7,6 +7,12 @@ Using the FUNCTION_BLOCK FB_AlarmLogEvent we can create another Event instance t
 Event ID's are passed into the FB which in the end is tied to the Alarm_Text List.  The Reason behind this is for Localization.  Within a Text List you can add other languages and switch between them with little effort.
 <br />
 
+
+
+https://github.com/user-attachments/assets/96ab0a9b-36f4-4f58-893f-d03ef3707812
+
+
+
 A Class ID is also passed in, for example, Message, Warning, Alarm to differentiate different events.
 
 Alarm Frames are used to display the information with a pass in value of Index.  Based on the Index value in the list (1-10) an active event will be displayed.
