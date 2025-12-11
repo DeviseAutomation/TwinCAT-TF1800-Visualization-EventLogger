@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <POU Name="FB_AlarmLogEvent" Id="{70d2bab2-4ff5-41a5-abb7-bc9b940a9876}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_AlarmLogEvent
+VAR_INPUT
+	bSetEvent			: BOOL;	//Trigger to activate the Alarm
+	i_diEventID			: DINT;
+	i_iClassID			: INT;
+	bLatchTillAck 		: BOOL; //Latch Alarm active till Acked even if alarm event clears.
+	bAck				: BOOL; //Acknowledge the alarm and clear it.
+	tsTime				:TIMESTRUCT;
+END_VAR
+VAR_OUTPUT
+	q_stAlarmEventData	: ST_AlarmEventData;
+	q_xActive			: BOOL;
+END_VAR
+VAR
+	fbFormatString		: FB_FormatString;
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[//Why use a Function Block?
+//So we could add a active time/date stamp
+//So we could add to a historical alarm area
+//So we could add ack requirment if decided one was needed.
+
+//Monitor when Alarm is active, save data
+	IF bSetEvent AND NOT q_xActive THEN 
+		q_xActive	:= TRUE;
+		q_stAlarmEventData.diEventID := i_diEventID;
+		q_stAlarmEventData.iClass := i_iClassID;
+		fbFormatString(sFormat := '%d:%d:%d',
+						arg1 := F_word(tsTime.wHour),
+						arg2 := F_word(tsTime.wMinute),
+						arg3 := F_word(tsTime.wSecond),
+						sOut => q_stAlarmEventData.sTime );	
+	ELSIF NOT bSetEvent AND NOT bLatchTillAck THEN
+		q_xActive := FALSE;
+	END_IF;
+
+//Alarm no longer active
+	IF bLatchTillAck AND q_xActive AND bAck THEN
+		q_xActive := FALSE;
+	END_IF
+	
+
+]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

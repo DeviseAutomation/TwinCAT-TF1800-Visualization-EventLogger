@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <GVL Name="SYS" Id="{d96ae2b4-f02e-40d4-9362-970dac11545e}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+VAR_GLOBAL CONSTANT
+iMaxSpeedConstant 		: INT := 60;
+END_VAR
+
+{attribute 'qualified_only'}
+VAR_GLOBAL RETAIN
+	
+END_VAR
+
+{attribute 'qualified_only'}
+VAR_GLOBAL
+	
+//Program Declarations
+	xFirstScan				: BOOL := TRUE;;
+	xFaultPresent			: BOOL;
+	ftrigFaultReset			: F_TRIG;
+	xFaultReset				: BOOL;
+
+//System Info
+	fbGetLocalSystemTIme	: FB_LocalSystemTime;
+	sSystemDateTime 		: STRING;
+	sSystemTime 			: STRING;
+	sSystemDate 			: STRING;
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>

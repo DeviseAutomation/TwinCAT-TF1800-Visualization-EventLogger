@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <GVL Name="HMI" Id="{62041f5f-4581-469c-9128-db07eeec7583}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+VAR_GLOBAL
+astActiveAlarmsList		: ARRAY [0..10] OF ST_AlarmEventData; // Display list of 10 active alarms, any more than that are just snowballs anyway so why display	
+
+//Common Controls
+	xFaultResetPB			: BOOL; //HMI Fault Reset PB
+	xFaultPresent			: BOOL; //HMI Fault Present Indicator
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>
