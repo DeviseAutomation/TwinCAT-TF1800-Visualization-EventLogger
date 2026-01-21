@@ -13,7 +13,7 @@
 		</System>
 		<Plc>
 			<Project GUID="{81D02545-4A25-4D69-AC35-52FA7873E322}" Name="PLC_Project" PrjFilePath="PLC_Project\PLC_Project.plcproj" TmcFilePath="PLC_Project\PLC_Project.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcHash="{98AF53CE-25E3-65CB-44CD-D4B8949D412C}">
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcHash="{D0B4054B-30AB-96B6-EF46-702754381B20}" TmcPath="PLC_Project\PLC_Project.tmc">
 					<Name>PLC_Project Instance</Name>
 					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 					<Vars VarGrpType="1">
@@ -73,7 +73,6 @@
 		</Io>
 	</Project>
 	<Mappings>
-		<MappingInfo Identifier="{00000000-2001-0850-0020-500810000403}" Id="#x02030010"/>
 		<OwnerA Name="TIPC^PLC_Project^PLC_Project Instance">
 			<OwnerB Name="TIID^Device 1 (EtherCAT)">
 				<Link VarA="PlcTask Inputs^MAIN.DevState" VarB="Inputs^DevState"/>

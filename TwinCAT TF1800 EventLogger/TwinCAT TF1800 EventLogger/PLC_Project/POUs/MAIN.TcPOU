@@ -5,13 +5,15 @@
 VAR
 	DevState AT %I*			: UINT;
 	Fault 					: ARRAY [1..100] OF BOOL;
-	fbAlarmLogEvent 		: ARRAY [1..100] OF FB_AlarmLogEvent; //Alarm Logging Event Handler
+	fbAlarmLogEvent 		: ARRAY [1..100] OF FB_AlarmLogEvent_TextList; //Alarm Logging Event Handler
+	fbAlarmLogEventTable	: ARRAY [1..100] OF FB_AlarmLogEvent_Table; //Alarm Logging Event Handler
 	iFaultIndex				: INT;
 	iAlarmClearIndex		: INT;
 	iAlarmActiveIndex		: INT;
+	iAlarmActiveIndex2		: INT;
 	diAlarmEventLogIndex	: DINT;
 	
-	TestAlarm				: ARRAY[1..5] OF BOOL;
+	TestAlarm				: ARRAY[1..10] OF BOOL;
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -27,12 +29,118 @@ END_VAR
 // HMI Fault PB Passthrough		
 SYS.xFaultReset := HMI.xFaultResetPB;
 		
-A99_Alarms();
+A99_Alarms_TextList();
+A99_Alarms_Table();
 
 // First Scan Complete
 SYS.xFirstScan := FALSE;]]></ST>
     </Implementation>
-    <Action Name="A99_Alarms" Id="{e6808c4c-dd4f-4e4a-b903-fa553d80dc42}">
+    <Action Name="A99_Alarms_Table" Id="{964fc8f7-596d-4e3c-b741-2a318ba4dda6}">
+      <Implementation>
+        <ST><![CDATA[//System Faults
+	//Power Interrupted Fault							
+		fbAlarmLogEventTable[1](
+							i_diEventID:= 1,							// Must match the AlarmText Index for the message to display
+							sEventText := 'Power Interrupt Fault',		// Enter an Event String Here
+							i_iClassID:= 7,								// 0 = none, 1= Maintenance, 2= Message, 3= Hint, 4= StateInfo, 5= Instruction, 6 = Warning, 7= Alarm, 8= Paramater		
+							bSetEvent := SYS.xFirstScan,				// Event activates on rising edge, clears on falling edge
+							bLatchTillAck:= TRUE,						// Option to Latch alarm on even if no longer active, wait till alarm ack to clear
+							bAck:= SYS.xFaultReset);					// Acknowledged and clears on rising edge if option LatchTillAck = false
+							
+
+		fbAlarmLogEventTable[2](
+							i_diEventID:= 2,
+							sEventText := 'Test Alarm 1',
+							i_iClassID:= 7,
+							bSetEvent := TestAlarm[1],
+							bLatchTillAck:= TRUE,
+							bAck:= SYS.xFaultReset);
+							
+
+		fbAlarmLogEventTable[3](
+							i_diEventID:= 3,
+							sEventText := 'Test Alarm 2',
+							i_iClassID:= 2,
+							bSetEvent := TestAlarm[2],
+							bLatchTillAck:= TRUE,
+							bAck:= SYS.xFaultReset);
+							
+					
+		fbAlarmLogEventTable[4](
+							i_diEventID:= 4,
+							sEventText := 'Test Alarm 3',
+							i_iClassID:= 6,
+							bSetEvent := TestAlarm[3],
+							bLatchTillAck:= TRUE,
+							bAck:= SYS.xFaultReset);
+							
+				
+		fbAlarmLogEventTable[5](
+							i_diEventID:= 5,
+							sEventText := 'Test Alarm 4',
+							i_iClassID:= 7,
+							bSetEvent := TestAlarm[4],
+							bLatchTillAck:= TRUE,
+							bAck:= SYS.xFaultReset);
+
+
+// iClassID : 0 = none, 1= Maintenance, 2= Message, 3= Hint, 4= StateInfo, 5= Instruction, 6 = Warning, 7= Alarm, 8= Paramater	
+//Monitor Fault Present
+FOR iFaultIndex := 1 TO 100 BY 1 DO
+	//System
+	IF (iFaultIndex > 0) AND (iFaultIndex < 20) THEN // Look at Alarm Group 1-20
+		IF fbAlarmLogEventTable[iFaultIndex].q_xActive AND (fbAlarmLogEventTable[iFaultIndex].i_iClassID = 7) THEN // Only Class 7 Count as Alarms
+			SYS.xFaultPresent := TRUE;
+		END_IF
+	END_IF
+	
+(*  Some Other Alarm Group
+	IF (iFaultIndex >= 20) AND (iFaultIndex < 40) THEN // Subsequent Alarm Group
+		IF fbAlarmLogEvent[iFaultIndex].q_xActive AND (fbAlarmLogEvent[iFaultIndex].i_iClassID = 7) THEN
+			OtherMachineFaultPreset := TRUE;
+		END_IF
+	END_IF
+*)
+END_FOR
+
+// System Fault to HMI Fault Indicator
+HMI.xFaultPresent := SYS.xFaultPresent;
+
+IF SYS.xFaultReset THEN
+	SYS.xFaultPresent := FALSE;
+END_IF
+
+(* Log all Alarms using the fbAlarmLogEvent function block*)
+(* Alarm Text is in the Alarm_TextList File*)	
+
+//Clear active alarms list before re-populating to ensure old cleared alarms are not stranded in the list
+IF SYS.xFaultReset THEN
+	FOR iAlarmClearIndex := 1 TO 50 BY 1 DO //10 possible active Alarms, no more!
+		HMI.astActiveAlarmsTable[iAlarmClearIndex].sEvent := '';
+		HMI.astActiveAlarmsTable[iAlarmClearIndex].diEventID := 0;
+		HMI.astActiveAlarmsTable[iAlarmClearIndex].iClass := 0;
+		HMI.astActiveAlarmsTable[iAlarmClearIndex].sTime := '';
+	END_FOR;
+END_IF
+	
+//Populate HMI Active Alarms list
+	iAlarmActiveIndex2 := 0;  //Initialize before seeing how many active alarms there are.
+	FOR diAlarmEventLogIndex := 1 TO 100 BY 1 DO //100 possible defined Alarms, no more!
+		IF fbAlarmLogEvent[diAlarmEventLogIndex].q_xActive THEN
+			IF iAlarmActiveIndex2 <= 9 THEN //10 max active alarms, no more!
+				iAlarmActiveIndex2 := iAlarmActiveIndex2 + 1;
+			END_IF
+			HMI.astActiveAlarmsTable[iAlarmActiveIndex2].sEvent := fbAlarmLogEventTable[diAlarmEventLogIndex].q_stAlarmEventData.sEvent;
+			HMI.astActiveAlarmsTable[iAlarmActiveIndex2].diEventID := fbAlarmLogEventTable[diAlarmEventLogIndex].q_stAlarmEventData.diEventID;
+			HMI.astActiveAlarmsTable[iAlarmActiveIndex2].iClass := fbAlarmLogEventTable[diAlarmEventLogIndex].q_stAlarmEventData.iClass;
+			IF HMI.astActiveAlarmsTable[iAlarmActiveIndex2].sTime = '' THEN
+				HMI.astActiveAlarmsTable[iAlarmActiveIndex2].sTime := SYS.sSystemTime;
+			END_IF
+		END_IF
+	END_FOR;					]]></ST>
+      </Implementation>
+    </Action>
+    <Action Name="A99_Alarms_TextList" Id="{e6808c4c-dd4f-4e4a-b903-fa553d80dc42}">
       <Implementation>
         <ST><![CDATA[//System Faults
 	//Power Interrupted Fault

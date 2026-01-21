@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <DUT Name="ST_AlarmEventData_Table" Id="{b1083cb1-5041-43ae-b51b-a53689f9ed6d}">
+    <Declaration><![CDATA[TYPE ST_AlarmEventData_Table :
+STRUCT
+	qActive		: BOOL;
+	diEventID	: DINT;
+	iClass		: INT; 		//0 = none, 1= Maintenance, 2= Message, 3= Hint, 4= StateInfo, 5= Instruction, 6 = Warning, 7= Alarm, 8= Parameter
+	sTime		: STRING;
+	sEvent		: STRING; 	// Event Text
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

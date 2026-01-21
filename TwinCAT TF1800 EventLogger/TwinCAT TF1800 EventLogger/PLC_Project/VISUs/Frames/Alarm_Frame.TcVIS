@@ -5,7 +5,7 @@
       <Data>
         <o xml:space="preserve" t="VisualObject">
           <n n="LastVisuLanguageModelEntry" />
-          <v n="UniqueIdGenerator">"106"</v>
+          <v n="UniqueIdGenerator">"246"</v>
           <o n="VisualElemList" t="VisualElemList">
             <l n="VisualElementList" t="VisualElemCollection" cet="GenericVisualElem">
               <o>
@@ -710,7 +710,10 @@
                             <v n="TypeNodeName">"sAlarmTextList"</v>
                             <o n="TypeNodeAttributes" t="TypeNodeAttributes2">
                               <v n="AttrFlags">0UL</v>
-                              <d n="TypeNodeAttributesData" t="CaseInsensitiveHashtable" />
+                              <d n="TypeNodeAttributesData" t="CaseInsensitiveHashtable" ckt="String" cvt="String">
+                                <v>Editor_TypeMatchVariable</v>
+                                <v>true</v>
+                              </d>
                               <v n="ConvDone">true</v>
                             </o>
                             <v n="TypeNodeId" t="Int16">255</v>
@@ -741,7 +744,10 @@
                             <v n="TypeNodeName">"sEventDataTextList"</v>
                             <o n="TypeNodeAttributes" t="TypeNodeAttributes2">
                               <v n="AttrFlags">0UL</v>
-                              <d n="TypeNodeAttributesData" t="CaseInsensitiveHashtable" />
+                              <d n="TypeNodeAttributesData" t="CaseInsensitiveHashtable" ckt="String" cvt="String">
+                                <v>Editor_TypeMatchVariable</v>
+                                <v>true</v>
+                              </d>
                               <v n="ConvDone">true</v>
                             </o>
                             <v n="TypeNodeId" t="Int16">256</v>
@@ -766,13 +772,16 @@
                             <l n="TypeNodeChildren" t="ArrayList" />
                             <o n="TypeNodeType" t="TypeNodeType">
                               <v n="TypeClass" t="TypeClass">Userdef</v>
-                              <v n="QualifiedName">"ST_AlarmEventData"</v>
-                              <v n="Name">"ST_AlarmEventData"</v>
+                              <v n="QualifiedName">"ST_AlarmEventData_TextList"</v>
+                              <v n="Name">"ST_AlarmEventData_TextList"</v>
                             </o>
                             <v n="TypeNodeName">"stAlarmLogEvent"</v>
                             <o n="TypeNodeAttributes" t="TypeNodeAttributes2">
                               <v n="AttrFlags">0UL</v>
-                              <d n="TypeNodeAttributesData" t="CaseInsensitiveHashtable" />
+                              <d n="TypeNodeAttributesData" t="CaseInsensitiveHashtable" ckt="String" cvt="String">
+                                <v>Editor_TypeMatchVariable</v>
+                                <v>true</v>
+                              </d>
                               <v n="ConvDone">true</v>
                             </o>
                             <v n="TypeNodeId" t="Int16">257</v>
@@ -816,16 +825,16 @@
                       <v n="Value">true</v>
                     </o>
                     <o>
-                      <v n="Id">1453656399L</v>
-                      <v n="Value">"astActiveAlarmsList_1"</v>
-                    </o>
-                    <o>
                       <v n="Id">2208787971L</v>
                       <v n="Value">"sAlarmTextList"</v>
                     </o>
                     <o>
                       <v n="Id">4149733596L</v>
                       <v n="Value">"sEventDataTextList"</v>
+                    </o>
+                    <o>
+                      <v n="Id">1453656399L</v>
+                      <v n="Value">"astActiveAlarmsList_1"</v>
                     </o>
                   </l>
                 </o>
@@ -1365,7 +1374,10 @@
                             <v n="TypeNodeName">"sAlarmTextList"</v>
                             <o n="TypeNodeAttributes" t="TypeNodeAttributes2">
                               <v n="AttrFlags">0UL</v>
-                              <d n="TypeNodeAttributesData" t="CaseInsensitiveHashtable" />
+                              <d n="TypeNodeAttributesData" t="CaseInsensitiveHashtable" ckt="String" cvt="String">
+                                <v>Editor_TypeMatchVariable</v>
+                                <v>true</v>
+                              </d>
                               <v n="ConvDone">true</v>
                             </o>
                             <v n="TypeNodeId" t="Int16">255</v>
@@ -1396,7 +1408,10 @@
                             <v n="TypeNodeName">"sEventDataTextList"</v>
                             <o n="TypeNodeAttributes" t="TypeNodeAttributes2">
                               <v n="AttrFlags">0UL</v>
-                              <d n="TypeNodeAttributesData" t="CaseInsensitiveHashtable" />
+                              <d n="TypeNodeAttributesData" t="CaseInsensitiveHashtable" ckt="String" cvt="String">
+                                <v>Editor_TypeMatchVariable</v>
+                                <v>true</v>
+                              </d>
                               <v n="ConvDone">true</v>
                             </o>
                             <v n="TypeNodeId" t="Int16">256</v>
@@ -1421,13 +1436,16 @@
                             <l n="TypeNodeChildren" t="ArrayList" />
                             <o n="TypeNodeType" t="TypeNodeType">
                               <v n="TypeClass" t="TypeClass">Userdef</v>
-                              <v n="QualifiedName">"ST_AlarmEventData"</v>
-                              <v n="Name">"ST_AlarmEventData"</v>
+                              <v n="QualifiedName">"ST_AlarmEventData_TextList"</v>
+                              <v n="Name">"ST_AlarmEventData_TextList"</v>
                             </o>
                             <v n="TypeNodeName">"stAlarmLogEvent"</v>
                             <o n="TypeNodeAttributes" t="TypeNodeAttributes2">
                               <v n="AttrFlags">0UL</v>
-                              <d n="TypeNodeAttributesData" t="CaseInsensitiveHashtable" />
+                              <d n="TypeNodeAttributesData" t="CaseInsensitiveHashtable" ckt="String" cvt="String">
+                                <v>Editor_TypeMatchVariable</v>
+                                <v>true</v>
+                              </d>
                               <v n="ConvDone">true</v>
                             </o>
                             <v n="TypeNodeId" t="Int16">257</v>
@@ -1471,16 +1489,16 @@
                       <v n="Value">true</v>
                     </o>
                     <o>
-                      <v n="Id">1453656399L</v>
-                      <v n="Value">"astActiveAlarmsList_2"</v>
-                    </o>
-                    <o>
                       <v n="Id">2208787971L</v>
                       <v n="Value">"sAlarmTextList"</v>
                     </o>
                     <o>
                       <v n="Id">4149733596L</v>
                       <v n="Value">"sEventDataTextList"</v>
+                    </o>
+                    <o>
+                      <v n="Id">1453656399L</v>
+                      <v n="Value">"astActiveAlarmsList_2"</v>
                     </o>
                   </l>
                 </o>
@@ -2020,7 +2038,10 @@
                             <v n="TypeNodeName">"sAlarmTextList"</v>
                             <o n="TypeNodeAttributes" t="TypeNodeAttributes2">
                               <v n="AttrFlags">0UL</v>
-                              <d n="TypeNodeAttributesData" t="CaseInsensitiveHashtable" />
+                              <d n="TypeNodeAttributesData" t="CaseInsensitiveHashtable" ckt="String" cvt="String">
+                                <v>Editor_TypeMatchVariable</v>
+                                <v>true</v>
+                              </d>
                               <v n="ConvDone">true</v>
                             </o>
                             <v n="TypeNodeId" t="Int16">255</v>
@@ -2051,7 +2072,10 @@
                             <v n="TypeNodeName">"sEventDataTextList"</v>
                             <o n="TypeNodeAttributes" t="TypeNodeAttributes2">
                               <v n="AttrFlags">0UL</v>
-                              <d n="TypeNodeAttributesData" t="CaseInsensitiveHashtable" />
+                              <d n="TypeNodeAttributesData" t="CaseInsensitiveHashtable" ckt="String" cvt="String">
+                                <v>Editor_TypeMatchVariable</v>
+                                <v>true</v>
+                              </d>
                               <v n="ConvDone">true</v>
                             </o>
                             <v n="TypeNodeId" t="Int16">256</v>
@@ -2076,13 +2100,16 @@
                             <l n="TypeNodeChildren" t="ArrayList" />
                             <o n="TypeNodeType" t="TypeNodeType">
                               <v n="TypeClass" t="TypeClass">Userdef</v>
-                              <v n="QualifiedName">"ST_AlarmEventData"</v>
-                              <v n="Name">"ST_AlarmEventData"</v>
+                              <v n="QualifiedName">"ST_AlarmEventData_TextList"</v>
+                              <v n="Name">"ST_AlarmEventData_TextList"</v>
                             </o>
                             <v n="TypeNodeName">"stAlarmLogEvent"</v>
                             <o n="TypeNodeAttributes" t="TypeNodeAttributes2">
                               <v n="AttrFlags">0UL</v>
-                              <d n="TypeNodeAttributesData" t="CaseInsensitiveHashtable" />
+                              <d n="TypeNodeAttributesData" t="CaseInsensitiveHashtable" ckt="String" cvt="String">
+                                <v>Editor_TypeMatchVariable</v>
+                                <v>true</v>
+                              </d>
                               <v n="ConvDone">true</v>
                             </o>
                             <v n="TypeNodeId" t="Int16">257</v>
@@ -2126,16 +2153,16 @@
                       <v n="Value">true</v>
                     </o>
                     <o>
-                      <v n="Id">1453656399L</v>
-                      <v n="Value">"astActiveAlarmsList_4"</v>
-                    </o>
-                    <o>
                       <v n="Id">2208787971L</v>
                       <v n="Value">"sAlarmTextList"</v>
                     </o>
                     <o>
                       <v n="Id">4149733596L</v>
                       <v n="Value">"sEventDataTextList"</v>
+                    </o>
+                    <o>
+                      <v n="Id">1453656399L</v>
+                      <v n="Value">"astActiveAlarmsList_4"</v>
                     </o>
                   </l>
                 </o>
@@ -2675,7 +2702,10 @@
                             <v n="TypeNodeName">"sAlarmTextList"</v>
                             <o n="TypeNodeAttributes" t="TypeNodeAttributes2">
                               <v n="AttrFlags">0UL</v>
-                              <d n="TypeNodeAttributesData" t="CaseInsensitiveHashtable" />
+                              <d n="TypeNodeAttributesData" t="CaseInsensitiveHashtable" ckt="String" cvt="String">
+                                <v>Editor_TypeMatchVariable</v>
+                                <v>true</v>
+                              </d>
                               <v n="ConvDone">true</v>
                             </o>
                             <v n="TypeNodeId" t="Int16">255</v>
@@ -2706,7 +2736,10 @@
                             <v n="TypeNodeName">"sEventDataTextList"</v>
                             <o n="TypeNodeAttributes" t="TypeNodeAttributes2">
                               <v n="AttrFlags">0UL</v>
-                              <d n="TypeNodeAttributesData" t="CaseInsensitiveHashtable" />
+                              <d n="TypeNodeAttributesData" t="CaseInsensitiveHashtable" ckt="String" cvt="String">
+                                <v>Editor_TypeMatchVariable</v>
+                                <v>true</v>
+                              </d>
                               <v n="ConvDone">true</v>
                             </o>
                             <v n="TypeNodeId" t="Int16">256</v>
@@ -2731,13 +2764,16 @@
                             <l n="TypeNodeChildren" t="ArrayList" />
                             <o n="TypeNodeType" t="TypeNodeType">
                               <v n="TypeClass" t="TypeClass">Userdef</v>
-                              <v n="QualifiedName">"ST_AlarmEventData"</v>
-                              <v n="Name">"ST_AlarmEventData"</v>
+                              <v n="QualifiedName">"ST_AlarmEventData_TextList"</v>
+                              <v n="Name">"ST_AlarmEventData_TextList"</v>
                             </o>
                             <v n="TypeNodeName">"stAlarmLogEvent"</v>
                             <o n="TypeNodeAttributes" t="TypeNodeAttributes2">
                               <v n="AttrFlags">0UL</v>
-                              <d n="TypeNodeAttributesData" t="CaseInsensitiveHashtable" />
+                              <d n="TypeNodeAttributesData" t="CaseInsensitiveHashtable" ckt="String" cvt="String">
+                                <v>Editor_TypeMatchVariable</v>
+                                <v>true</v>
+                              </d>
                               <v n="ConvDone">true</v>
                             </o>
                             <v n="TypeNodeId" t="Int16">257</v>
@@ -2781,16 +2817,16 @@
                       <v n="Value">true</v>
                     </o>
                     <o>
-                      <v n="Id">1453656399L</v>
-                      <v n="Value">"astActiveAlarmsList_3"</v>
-                    </o>
-                    <o>
                       <v n="Id">2208787971L</v>
                       <v n="Value">"sAlarmTextList"</v>
                     </o>
                     <o>
                       <v n="Id">4149733596L</v>
                       <v n="Value">"sEventDataTextList"</v>
+                    </o>
+                    <o>
+                      <v n="Id">1453656399L</v>
+                      <v n="Value">"astActiveAlarmsList_3"</v>
                     </o>
                   </l>
                 </o>
@@ -3330,7 +3366,10 @@
                             <v n="TypeNodeName">"sAlarmTextList"</v>
                             <o n="TypeNodeAttributes" t="TypeNodeAttributes2">
                               <v n="AttrFlags">0UL</v>
-                              <d n="TypeNodeAttributesData" t="CaseInsensitiveHashtable" />
+                              <d n="TypeNodeAttributesData" t="CaseInsensitiveHashtable" ckt="String" cvt="String">
+                                <v>Editor_TypeMatchVariable</v>
+                                <v>true</v>
+                              </d>
                               <v n="ConvDone">true</v>
                             </o>
                             <v n="TypeNodeId" t="Int16">255</v>
@@ -3361,7 +3400,10 @@
                             <v n="TypeNodeName">"sEventDataTextList"</v>
                             <o n="TypeNodeAttributes" t="TypeNodeAttributes2">
                               <v n="AttrFlags">0UL</v>
-                              <d n="TypeNodeAttributesData" t="CaseInsensitiveHashtable" />
+                              <d n="TypeNodeAttributesData" t="CaseInsensitiveHashtable" ckt="String" cvt="String">
+                                <v>Editor_TypeMatchVariable</v>
+                                <v>true</v>
+                              </d>
                               <v n="ConvDone">true</v>
                             </o>
                             <v n="TypeNodeId" t="Int16">256</v>
@@ -3386,13 +3428,16 @@
                             <l n="TypeNodeChildren" t="ArrayList" />
                             <o n="TypeNodeType" t="TypeNodeType">
                               <v n="TypeClass" t="TypeClass">Userdef</v>
-                              <v n="QualifiedName">"ST_AlarmEventData"</v>
-                              <v n="Name">"ST_AlarmEventData"</v>
+                              <v n="QualifiedName">"ST_AlarmEventData_TextList"</v>
+                              <v n="Name">"ST_AlarmEventData_TextList"</v>
                             </o>
                             <v n="TypeNodeName">"stAlarmLogEvent"</v>
                             <o n="TypeNodeAttributes" t="TypeNodeAttributes2">
                               <v n="AttrFlags">0UL</v>
-                              <d n="TypeNodeAttributesData" t="CaseInsensitiveHashtable" />
+                              <d n="TypeNodeAttributesData" t="CaseInsensitiveHashtable" ckt="String" cvt="String">
+                                <v>Editor_TypeMatchVariable</v>
+                                <v>true</v>
+                              </d>
                               <v n="ConvDone">true</v>
                             </o>
                             <v n="TypeNodeId" t="Int16">257</v>
@@ -3436,16 +3481,16 @@
                       <v n="Value">true</v>
                     </o>
                     <o>
-                      <v n="Id">1453656399L</v>
-                      <v n="Value">"astActiveAlarmsList_5"</v>
-                    </o>
-                    <o>
                       <v n="Id">2208787971L</v>
                       <v n="Value">"sAlarmTextList"</v>
                     </o>
                     <o>
                       <v n="Id">4149733596L</v>
                       <v n="Value">"sEventDataTextList"</v>
+                    </o>
+                    <o>
+                      <v n="Id">1453656399L</v>
+                      <v n="Value">"astActiveAlarmsList_5"</v>
                     </o>
                   </l>
                 </o>
@@ -3985,7 +4030,10 @@
                             <v n="TypeNodeName">"sAlarmTextList"</v>
                             <o n="TypeNodeAttributes" t="TypeNodeAttributes2">
                               <v n="AttrFlags">0UL</v>
-                              <d n="TypeNodeAttributesData" t="CaseInsensitiveHashtable" />
+                              <d n="TypeNodeAttributesData" t="CaseInsensitiveHashtable" ckt="String" cvt="String">
+                                <v>Editor_TypeMatchVariable</v>
+                                <v>true</v>
+                              </d>
                               <v n="ConvDone">true</v>
                             </o>
                             <v n="TypeNodeId" t="Int16">255</v>
@@ -4016,7 +4064,10 @@
                             <v n="TypeNodeName">"sEventDataTextList"</v>
                             <o n="TypeNodeAttributes" t="TypeNodeAttributes2">
                               <v n="AttrFlags">0UL</v>
-                              <d n="TypeNodeAttributesData" t="CaseInsensitiveHashtable" />
+                              <d n="TypeNodeAttributesData" t="CaseInsensitiveHashtable" ckt="String" cvt="String">
+                                <v>Editor_TypeMatchVariable</v>
+                                <v>true</v>
+                              </d>
                               <v n="ConvDone">true</v>
                             </o>
                             <v n="TypeNodeId" t="Int16">256</v>
@@ -4041,13 +4092,16 @@
                             <l n="TypeNodeChildren" t="ArrayList" />
                             <o n="TypeNodeType" t="TypeNodeType">
                               <v n="TypeClass" t="TypeClass">Userdef</v>
-                              <v n="QualifiedName">"ST_AlarmEventData"</v>
-                              <v n="Name">"ST_AlarmEventData"</v>
+                              <v n="QualifiedName">"ST_AlarmEventData_TextList"</v>
+                              <v n="Name">"ST_AlarmEventData_TextList"</v>
                             </o>
                             <v n="TypeNodeName">"stAlarmLogEvent"</v>
                             <o n="TypeNodeAttributes" t="TypeNodeAttributes2">
                               <v n="AttrFlags">0UL</v>
-                              <d n="TypeNodeAttributesData" t="CaseInsensitiveHashtable" />
+                              <d n="TypeNodeAttributesData" t="CaseInsensitiveHashtable" ckt="String" cvt="String">
+                                <v>Editor_TypeMatchVariable</v>
+                                <v>true</v>
+                              </d>
                               <v n="ConvDone">true</v>
                             </o>
                             <v n="TypeNodeId" t="Int16">257</v>
@@ -4091,16 +4145,16 @@
                       <v n="Value">true</v>
                     </o>
                     <o>
-                      <v n="Id">1453656399L</v>
-                      <v n="Value">"astActiveAlarmsList_6"</v>
-                    </o>
-                    <o>
                       <v n="Id">2208787971L</v>
                       <v n="Value">"sAlarmTextList"</v>
                     </o>
                     <o>
                       <v n="Id">4149733596L</v>
                       <v n="Value">"sEventDataTextList"</v>
+                    </o>
+                    <o>
+                      <v n="Id">1453656399L</v>
+                      <v n="Value">"astActiveAlarmsList_6"</v>
                     </o>
                   </l>
                 </o>
@@ -4640,7 +4694,10 @@
                             <v n="TypeNodeName">"sAlarmTextList"</v>
                             <o n="TypeNodeAttributes" t="TypeNodeAttributes2">
                               <v n="AttrFlags">0UL</v>
-                              <d n="TypeNodeAttributesData" t="CaseInsensitiveHashtable" />
+                              <d n="TypeNodeAttributesData" t="CaseInsensitiveHashtable" ckt="String" cvt="String">
+                                <v>Editor_TypeMatchVariable</v>
+                                <v>true</v>
+                              </d>
                               <v n="ConvDone">true</v>
                             </o>
                             <v n="TypeNodeId" t="Int16">255</v>
@@ -4671,7 +4728,10 @@
                             <v n="TypeNodeName">"sEventDataTextList"</v>
                             <o n="TypeNodeAttributes" t="TypeNodeAttributes2">
                               <v n="AttrFlags">0UL</v>
-                              <d n="TypeNodeAttributesData" t="CaseInsensitiveHashtable" />
+                              <d n="TypeNodeAttributesData" t="CaseInsensitiveHashtable" ckt="String" cvt="String">
+                                <v>Editor_TypeMatchVariable</v>
+                                <v>true</v>
+                              </d>
                               <v n="ConvDone">true</v>
                             </o>
                             <v n="TypeNodeId" t="Int16">256</v>
@@ -4696,13 +4756,16 @@
                             <l n="TypeNodeChildren" t="ArrayList" />
                             <o n="TypeNodeType" t="TypeNodeType">
                               <v n="TypeClass" t="TypeClass">Userdef</v>
-                              <v n="QualifiedName">"ST_AlarmEventData"</v>
-                              <v n="Name">"ST_AlarmEventData"</v>
+                              <v n="QualifiedName">"ST_AlarmEventData_TextList"</v>
+                              <v n="Name">"ST_AlarmEventData_TextList"</v>
                             </o>
                             <v n="TypeNodeName">"stAlarmLogEvent"</v>
                             <o n="TypeNodeAttributes" t="TypeNodeAttributes2">
                               <v n="AttrFlags">0UL</v>
-                              <d n="TypeNodeAttributesData" t="CaseInsensitiveHashtable" />
+                              <d n="TypeNodeAttributesData" t="CaseInsensitiveHashtable" ckt="String" cvt="String">
+                                <v>Editor_TypeMatchVariable</v>
+                                <v>true</v>
+                              </d>
                               <v n="ConvDone">true</v>
                             </o>
                             <v n="TypeNodeId" t="Int16">257</v>
@@ -4746,16 +4809,16 @@
                       <v n="Value">true</v>
                     </o>
                     <o>
-                      <v n="Id">1453656399L</v>
-                      <v n="Value">"astActiveAlarmsList_7"</v>
-                    </o>
-                    <o>
                       <v n="Id">2208787971L</v>
                       <v n="Value">"sAlarmTextList"</v>
                     </o>
                     <o>
                       <v n="Id">4149733596L</v>
                       <v n="Value">"sEventDataTextList"</v>
+                    </o>
+                    <o>
+                      <v n="Id">1453656399L</v>
+                      <v n="Value">"astActiveAlarmsList_7"</v>
                     </o>
                   </l>
                 </o>
@@ -5295,7 +5358,10 @@
                             <v n="TypeNodeName">"sAlarmTextList"</v>
                             <o n="TypeNodeAttributes" t="TypeNodeAttributes2">
                               <v n="AttrFlags">0UL</v>
-                              <d n="TypeNodeAttributesData" t="CaseInsensitiveHashtable" />
+                              <d n="TypeNodeAttributesData" t="CaseInsensitiveHashtable" ckt="String" cvt="String">
+                                <v>Editor_TypeMatchVariable</v>
+                                <v>true</v>
+                              </d>
                               <v n="ConvDone">true</v>
                             </o>
                             <v n="TypeNodeId" t="Int16">255</v>
@@ -5326,7 +5392,10 @@
                             <v n="TypeNodeName">"sEventDataTextList"</v>
                             <o n="TypeNodeAttributes" t="TypeNodeAttributes2">
                               <v n="AttrFlags">0UL</v>
-                              <d n="TypeNodeAttributesData" t="CaseInsensitiveHashtable" />
+                              <d n="TypeNodeAttributesData" t="CaseInsensitiveHashtable" ckt="String" cvt="String">
+                                <v>Editor_TypeMatchVariable</v>
+                                <v>true</v>
+                              </d>
                               <v n="ConvDone">true</v>
                             </o>
                             <v n="TypeNodeId" t="Int16">256</v>
@@ -5339,7 +5408,7 @@
                           </o>
                           <o>
                             <v n="Flags">1L</v>
-                            <v n="BasicTypeNodeValue">"astActiveAlarmsList_8"</v>
+                            <n n="BasicTypeNodeValue" />
                             <v n="BasicTypeNodeAcceptsExpression">true</v>
                             <n n="BasicTypeNodeFastAccess" />
                             <a n="BasicTypeNodeEnumValues" et="String" />
@@ -5351,13 +5420,16 @@
                             <l n="TypeNodeChildren" t="ArrayList" />
                             <o n="TypeNodeType" t="TypeNodeType">
                               <v n="TypeClass" t="TypeClass">Userdef</v>
-                              <v n="QualifiedName">"ST_AlarmEventData"</v>
-                              <v n="Name">"ST_AlarmEventData"</v>
+                              <v n="QualifiedName">"ST_AlarmEventData_TextList"</v>
+                              <v n="Name">"ST_AlarmEventData_TextList"</v>
                             </o>
                             <v n="TypeNodeName">"stAlarmLogEvent"</v>
                             <o n="TypeNodeAttributes" t="TypeNodeAttributes2">
                               <v n="AttrFlags">0UL</v>
-                              <d n="TypeNodeAttributesData" t="CaseInsensitiveHashtable" />
+                              <d n="TypeNodeAttributesData" t="CaseInsensitiveHashtable" ckt="String" cvt="String">
+                                <v>Editor_TypeMatchVariable</v>
+                                <v>true</v>
+                              </d>
                               <v n="ConvDone">true</v>
                             </o>
                             <v n="TypeNodeId" t="Int16">257</v>
@@ -5399,10 +5471,6 @@
                     <o>
                       <v n="Id">2597686782L</v>
                       <v n="Value">true</v>
-                    </o>
-                    <o>
-                      <v n="Id">1453656399L</v>
-                      <v n="Value">"astActiveAlarmsList_8"</v>
                     </o>
                     <o>
                       <v n="Id">2208787971L</v>
@@ -6668,14 +6736,14 @@ END_VAR
 VAR_INPUT
 	sAlarmTextList 	: STRING;
 	sEventDataTextList : STRING;
-	astActiveAlarmsList_1 : ST_AlarmEventData;
-	astActiveAlarmsList_2 : ST_AlarmEventData;
-	astActiveAlarmsList_3 : ST_AlarmEventData;
-	astActiveAlarmsList_4 : ST_AlarmEventData;
-	astActiveAlarmsList_5 : ST_AlarmEventData;
-	astActiveAlarmsList_6 : ST_AlarmEventData;
-	astActiveAlarmsList_7 : ST_AlarmEventData;
-	astActiveAlarmsList_8 : ST_AlarmEventData;
+	astActiveAlarmsList_1 : ST_AlarmEventData_TextList;
+	astActiveAlarmsList_2 : ST_AlarmEventData_TextList;
+	astActiveAlarmsList_3 : ST_AlarmEventData_TextList;
+	astActiveAlarmsList_4 : ST_AlarmEventData_TextList;
+	astActiveAlarmsList_5 : ST_AlarmEventData_TextList;
+	astActiveAlarmsList_6 : ST_AlarmEventData_TextList;
+	astActiveAlarmsList_7 : ST_AlarmEventData_TextList;
+	astActiveAlarmsList_8 : ST_AlarmEventData_TextList;
 END_VAR
 
 VAR_OUTPUT
@@ -6716,7 +6784,9 @@ END_VAR"</v>
             </d2>
             <v n="Version">2</v>
           </o>
-          <n n="FrameInterfaceDataModel" />
+          <o n="FrameInterfaceDataModel" t="HierarchicalProperties">
+            <l2 n="HierarchicalProperties" />
+          </o>
         </o>
       </Data>
       <TypeList>
@@ -6736,6 +6806,7 @@ END_VAR"</v>
         <Type n="GenericVisualElem">{f86c2928-8614-4cca-824b-e819ac4d58c4}</Type>
         <Type n="Guid">System.Guid</Type>
         <Type n="Hashtable">System.Collections.Hashtable</Type>
+        <Type n="HierarchicalProperties">{af53e824-e51f-4be1-b210-d001ef8efbd1}</Type>
         <Type n="HotkeyConfiguration">{6b108d46-58af-4e41-a3f4-174d8f160cc4}</Type>
         <Type n="Int16">System.Int16</Type>
         <Type n="Int32">System.Int32</Type>

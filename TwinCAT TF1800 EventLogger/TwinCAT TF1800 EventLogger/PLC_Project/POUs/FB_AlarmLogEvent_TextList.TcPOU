@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
-  <POU Name="FB_AlarmLogEvent" Id="{70d2bab2-4ff5-41a5-abb7-bc9b940a9876}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK FB_AlarmLogEvent
+  <POU Name="FB_AlarmLogEvent_TextList" Id="{70d2bab2-4ff5-41a5-abb7-bc9b940a9876}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_AlarmLogEvent_TextList
 VAR_INPUT
 	bSetEvent			: BOOL;	//Trigger to activate the Alarm
 	i_diEventID			: DINT;
@@ -11,7 +11,7 @@ VAR_INPUT
 	tsTime				:TIMESTRUCT;
 END_VAR
 VAR_OUTPUT
-	q_stAlarmEventData	: ST_AlarmEventData;
+	q_stAlarmEventData	: ST_AlarmEventData_TextList;
 	q_xActive			: BOOL;
 END_VAR
 VAR

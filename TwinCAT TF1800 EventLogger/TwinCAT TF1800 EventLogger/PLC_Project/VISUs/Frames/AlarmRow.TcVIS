@@ -5,7 +5,7 @@
       <Data>
         <o xml:space="preserve" t="VisualObject">
           <n n="LastVisuLanguageModelEntry" />
-          <v n="UniqueIdGenerator">"35"</v>
+          <v n="UniqueIdGenerator">"75"</v>
           <o n="VisualElemList" t="VisualElemList">
             <l n="VisualElementList" t="VisualElemCollection" cet="GenericVisualElem">
               <o>
@@ -1077,7 +1077,7 @@ END_VAR
 VAR_INPUT
 	sAlarmTextList 	: STRING;
 	sEventDataTextList : STRING;
-	stAlarmLogEvent : ST_AlarmEventData;
+	stAlarmLogEvent : ST_AlarmEventData_TextList;
 END_VAR"</v>
             <n n="LineInfoPersistence" />
           </o>
@@ -1106,10 +1106,17 @@ END_VAR"</v>
                 <v n="Width">1053</v>
                 <v n="Height">53</v>
               </o>
+              <v>2</v>
+              <o>
+                <v n="Width">1053</v>
+                <v n="Height">53</v>
+              </o>
             </d2>
-            <v n="Version">1</v>
+            <v n="Version">2</v>
           </o>
-          <n n="FrameInterfaceDataModel" />
+          <o n="FrameInterfaceDataModel" t="HierarchicalProperties">
+            <l2 n="HierarchicalProperties" />
+          </o>
         </o>
       </Data>
       <TypeList>
@@ -1126,6 +1133,7 @@ END_VAR"</v>
         <Type n="GenericVisualElem">{f86c2928-8614-4cca-824b-e819ac4d58c4}</Type>
         <Type n="Guid">System.Guid</Type>
         <Type n="Hashtable">System.Collections.Hashtable</Type>
+        <Type n="HierarchicalProperties">{af53e824-e51f-4be1-b210-d001ef8efbd1}</Type>
         <Type n="HotkeyConfiguration">{6b108d46-58af-4e41-a3f4-174d8f160cc4}</Type>
         <Type n="Int16">System.Int16</Type>
         <Type n="Int32">System.Int32</Type>

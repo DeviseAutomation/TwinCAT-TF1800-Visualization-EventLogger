@@ -19,7 +19,10 @@
     <CompilerDefines>VISU_USEPROPERTYINFO,VISU_USEWSTRING</CompilerDefines>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="DUTs\ST_AlarmEventData.TcDUT">
+    <Compile Include="DUTs\ST_AlarmEventData_TextList.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DUTs\ST_AlarmEventData_Table.TcDUT">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="GlobalTextList.TcGTLO">
@@ -36,7 +39,10 @@
     <Compile Include="PlcTask.TcTTO">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="POUs\FB_AlarmLogEvent.TcPOU">
+    <Compile Include="POUs\FB_AlarmLogEvent_TextList.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\FB_AlarmLogEvent_Table.TcPOU">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="POUs\MAIN.TcPOU">
@@ -46,6 +52,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="VISUs\Alarms.TcVIS">
+      <SubType>Code</SubType>
+      <DependentUpon>Visualization Manager.TcVMO</DependentUpon>
+    </Compile>
+    <Compile Include="VISUs\Alarm_Table.TcVIS">
       <SubType>Code</SubType>
       <DependentUpon>Visualization Manager.TcVMO</DependentUpon>
     </Compile>
