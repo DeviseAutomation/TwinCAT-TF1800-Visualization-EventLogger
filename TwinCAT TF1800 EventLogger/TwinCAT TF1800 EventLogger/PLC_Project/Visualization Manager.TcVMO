@@ -594,7 +594,7 @@
         <Data>
           <o xml:space="preserve" t="TargetVisualizationObject">
             <o n="ViewSettings" t="TargetVisualizationViewSettings">
-              <v n="StartVisu">"Alarms"</v>
+              <v n="StartVisu">"Event_Table"</v>
               <n n="HtmFileName" />
               <v n="UpdateRate">200</v>
               <v n="CommBufferSize">50000</v>

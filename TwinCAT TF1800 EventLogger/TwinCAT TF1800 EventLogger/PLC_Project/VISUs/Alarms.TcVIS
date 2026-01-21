@@ -5,7 +5,7 @@
       <Data>
         <o xml:space="preserve" t="VisualObject">
           <n n="LastVisuLanguageModelEntry" />
-          <v n="UniqueIdGenerator">"63"</v>
+          <v n="UniqueIdGenerator">"72"</v>
           <o n="VisualElemList" t="VisualElemList">
             <l n="VisualElementList" t="VisualElemCollection" cet="GenericVisualElem">
               <o>
@@ -1259,7 +1259,7 @@
                     </o>
                     <o>
                       <v n="Id">390574330L</v>
-                      <v n="Value">"Table Example"</v>
+                      <v n="Value">"Back"</v>
                     </o>
                     <o>
                       <v n="Id">2597686782L</v>
@@ -1267,7 +1267,7 @@
                     </o>
                     <o>
                       <v n="Id">823443203L</v>
-                      <v n="Value">"37"</v>
+                      <v n="Value">"947"</v>
                     </o>
                   </l>
                 </o>
@@ -1284,7 +1284,7 @@
                       <v n="AssignExpr">""</v>
                       <n n="Assign" />
                       <v n="Assign33">"Alarm_Table"</v>
-                      <v n="Type" t="ChangeVisuType">Assignment</v>
+                      <v n="Type" t="ChangeVisuType">Previous</v>
                     </o>
                   </a>
                 </d>
@@ -1473,7 +1473,7 @@
             </o>
             <v n="DialogDut">{2628d7e0-8d11-4d0a-8312-33ba2e56aaed}</v>
           </o>
-          <v n="LastUsedIdForIdentifier">16</v>
+          <v n="LastUsedIdForIdentifier">19</v>
           <o n="TextDocument" t="TextDocument">
             <v n="TextBlobForSerialisation">"VAR_IN_OUT
 	

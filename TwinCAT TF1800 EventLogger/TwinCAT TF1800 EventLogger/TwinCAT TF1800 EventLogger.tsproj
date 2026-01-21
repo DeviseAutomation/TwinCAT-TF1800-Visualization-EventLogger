@@ -1,5 +1,74 @@
 <?xml version="1.0"?>
 <TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4026.19">
+	<DataTypes>
+		<DataType>
+			<Name GUID="{D59211A5-38A9-4B23-B6EF-804271F46B6E}" PersistentType="true">Test_EventClass</Name>
+			<DisplayName TxtId=""><![CDATA[NewEventClass_DisplayText]]></DisplayName>
+			<EventId>
+				<Name Id="1">PowerInterrupt</Name>
+				<DisplayName TxtId=""><![CDATA[Power Interrupt Fault]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="2">Test_Event1</Name>
+				<DisplayName TxtId=""><![CDATA[Test Event 1 - Verbose]]></DisplayName>
+				<Severity>Verbose</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="3">Test_Event2</Name>
+				<DisplayName TxtId=""><![CDATA[Test Event 2 - Info]]></DisplayName>
+				<Severity>Info</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="4">Test_Event3</Name>
+				<DisplayName TxtId=""><![CDATA[Test Event 3 - Warning]]></DisplayName>
+				<Severity>Warning</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="5">Test_Event4</Name>
+				<DisplayName TxtId=""><![CDATA[Test Event 4 - Error]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="6">Test_Event5</Name>
+				<DisplayName TxtId=""><![CDATA[Test Event 5 - Critical]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="7">Test_Message1</Name>
+				<DisplayName TxtId=""><![CDATA[Hello World - Verbose]]></DisplayName>
+				<Severity>Verbose</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="8">Test_Message2</Name>
+				<DisplayName TxtId=""><![CDATA[Event Logger is Great! - Info]]></DisplayName>
+				<Severity>Info</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="9">Test_Message3</Name>
+				<DisplayName TxtId=""><![CDATA[Hello TwinCAT - Warning]]></DisplayName>
+				<Severity>Warning</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="10">Test_Message4</Name>
+				<DisplayName TxtId=""><![CDATA[Testing... Testing... Testing... - Error]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="11">Test_Message5</Name>
+				<DisplayName TxtId=""><![CDATA[Beckhoff > Rockwell - Critical]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<Hides>
+				<Hide GUID="{5A99D5CC-8C96-4B4C-B270-6E55AC040C2F}"/>
+				<Hide GUID="{30B780A6-80C5-4749-92CD-8CDD80EFC529}"/>
+				<Hide GUID="{DF24E682-D007-4783-8679-9C2E2D00793D}"/>
+				<Hide GUID="{BFA21397-0CFD-452C-908B-C2987803C6D7}"/>
+				<Hide GUID="{65E6FA1C-DC61-467A-9736-5E8C21D2C6B2}"/>
+				<Hide GUID="{DABE1413-17B2-4F7E-BA1F-20AA12B12CEF}"/>
+			</Hides>
+		</DataType>
+	</DataTypes>
 	<Project ProjectGUID="{4CE502ED-B3C9-4DE0-A4DB-D18AAF28CDE3}" Target64Bit="true" ShowHideConfigurations="#x3c6">
 		<System>
 			<Tasks>
@@ -13,7 +82,7 @@
 		</System>
 		<Plc>
 			<Project GUID="{81D02545-4A25-4D69-AC35-52FA7873E322}" Name="PLC_Project" PrjFilePath="PLC_Project\PLC_Project.plcproj" TmcFilePath="PLC_Project\PLC_Project.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcHash="{D0B4054B-30AB-96B6-EF46-702754381B20}" TmcPath="PLC_Project\PLC_Project.tmc">
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcHash="{5C9C596F-84E3-2CD0-B7B9-749CD049246B}" TmcPath="PLC_Project\PLC_Project.tmc">
 					<Name>PLC_Project Instance</Name>
 					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 					<Vars VarGrpType="1">

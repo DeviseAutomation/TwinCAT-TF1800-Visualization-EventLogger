@@ -41,6 +41,11 @@
               <l n="LanguageTexts" t="ArrayList" />
             </o>
             <o>
+              <v n="TextID">"947"</v>
+              <v n="TextDefault">"Back"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
               <v n="TextID">"153"</v>
               <v n="TextDefault">"Class"</v>
               <l n="LanguageTexts" t="ArrayList" />
@@ -58,6 +63,21 @@
             <o>
               <v n="TextID">"360"</v>
               <v n="TextDefault">"Event ID"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"151"</v>
+              <v n="TextDefault">"Event Logger"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"480"</v>
+              <v n="TextDefault">"Event Table"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"578"</v>
+              <v n="TextDefault">"Event Table - This is the recommended control"</v>
               <l n="LanguageTexts" t="ArrayList" />
             </o>
             <o>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <POU Name="FB_Message" Id="{072a73a1-3129-4aca-8d96-786d4205db36}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_Message EXTENDS FB_TcMessage
+VAR_INPUT
+	evtEntry	: TcEventEntry;
+	bEvt		: BOOL;
+END_VAR
+VAR_OUTPUT
+	bSent		: BOOL;
+END_VAR
+VAR
+	rtrigSend	: R_TRIG;
+	bInit	: BOOL := TRUE;
+	bMem	: BOOL;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[bSent := FALSE;
+IF bInit THEN
+	SUPER^.CreateEx(stEventEntry := evtEntry, ipSourceInfo := 0);
+	bInit := FALSE;
+END_IF
+
+rtrigSend(CLK:= bEvt);
+IF rtrigSend.Q THEN
+	SUPER^.Send(0);
+	bSent := TRUE;
+END_IF
+]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

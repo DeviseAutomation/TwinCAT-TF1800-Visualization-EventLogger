@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <POU Name="FB_AlarmEx" Id="{1b6e2986-ad33-4c2a-a906-07771be18d7b}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_AlarmEx EXTENDS FB_TcAlarm
+VAR_INPUT
+	evtEntry	: TcEventEntry;
+	bEvt		: BOOL;
+	bConfirm	: BOOL;
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+	SourceInfo	: FB_TcSourceInfo;
+	bInit	: BOOL := TRUE;
+	bMem	: BOOL;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[IF bInit THEN
+	SUPER^.CreateEx(evtEntry, (evtentry.eSeverity = TcEventSeverity.Critical) OR (evtentry.eSeverity = TcEventSeverity.Error), 0);
+	bInit := FALSE;
+END_IF
+
+IF bEvt AND NOT bMem AND SUPER^.eConfirmationState <> TcEventConfirmationState.WaitForConfirmation THEN
+	SUPER^.Raise(0);
+END_IF
+
+IF bMem AND NOT bEvt THEN
+	SUPER^.Clear(0,FALSE);
+END_IF
+
+IF bConfirm THEN
+	SUPER^.Confirm(0);
+END_IF
+
+bMem := bEvt;
+
+]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

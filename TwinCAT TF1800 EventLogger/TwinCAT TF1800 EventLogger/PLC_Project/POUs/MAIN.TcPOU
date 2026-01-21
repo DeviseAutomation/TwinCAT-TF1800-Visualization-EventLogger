@@ -4,6 +4,13 @@
     <Declaration><![CDATA[PROGRAM MAIN
 VAR
 	DevState AT %I*			: UINT;
+	fbReadEvents			: FB_ReadTc3Events; // Required for Event Table Visu Control
+	fbMachineAlarm			: ARRAY[0..100] OF FB_AlarmEx;
+	fbMachineMessage		: ARRAY[0..100] OF FB_Message;
+	TestAlarm				: ARRAY[1..10] OF BOOL;
+	TestMessage				: ARRAY[1..10] OF BOOL;
+	
+	
 	Fault 					: ARRAY [1..100] OF BOOL;
 	fbAlarmLogEvent 		: ARRAY [1..100] OF FB_AlarmLogEvent_TextList; //Alarm Logging Event Handler
 	fbAlarmLogEventTable	: ARRAY [1..100] OF FB_AlarmLogEvent_Table; //Alarm Logging Event Handler
@@ -12,8 +19,6 @@ VAR
 	iAlarmActiveIndex		: INT;
 	iAlarmActiveIndex2		: INT;
 	diAlarmEventLogIndex	: DINT;
-	
-	TestAlarm				: ARRAY[1..10] OF BOOL;
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -28,7 +33,24 @@ END_VAR
 
 // HMI Fault PB Passthrough		
 SYS.xFaultReset := HMI.xFaultResetPB;
-		
+	
+// Twincat Event Logger	
+// The function block enables the events of the TwinCAT 3 EventLogger to be displayed in the visualization element event table. 
+// FB_ReadTc3Events is contained in the VisuElemEventTable library, which is automatically added to the project when the event table is activated
+fbReadEvents(
+	bReadEvents := TRUE,		// This input is used to enable the events to be read.
+	nLanguageID := ,			// Defines which translation of the event text is to be retrieved.
+	eDateAndTimeFormat := ,		// Defines the format of the timestamps. E_DateAndTimeFormat
+	bClearTable := ,			// The event table is cleared via a positive edge at this input. Alarms that were not acknowledged or reset are not removed from the table.
+	eMinSeverity := ,			// Only events whose severity is at least as high as the severity specified here are displayed in the event table.
+	aEvents => ,				// The function block uses this array to make the evaluated events available. The array can store a maximum of 80 messages. If the number of events is large, older messages are overwritten.
+	nNumberOfEvents => ,		// Indicates how many events were triggered.
+	bError => ,					// This output is set if an error occurs when polling or processing the events.
+	hrErrorCode => );			// Indicates the error code of the error that has occurred.
+	
+Tc3_EventLogger();
+
+// Legacy Alarm List
 A99_Alarms_TextList();
 A99_Alarms_Table();
 
@@ -231,6 +253,57 @@ END_IF
 			END_IF
 		END_IF
 	END_FOR;					]]></ST>
+      </Implementation>
+    </Action>
+    <Action Name="TC3_EventLogger" Id="{19e1a384-3d6f-4959-911c-184c6d8d0c38}">
+      <Implementation>
+        <ST><![CDATA[// Event Classes are created in System -> Type System -> Event Class
+// Write Click and Create your new Event Class.
+
+fbMachineMessage[1](
+	evtEntry:= TC_EVENTS.Test_EventClass.Test_Message1, 
+	bEvt:= TestMessage[1]);
+	
+fbMachineMessage[2](
+	evtEntry:= TC_EVENTS.Test_EventClass.Test_Message2, 
+	bEvt:= TestMessage[2]);
+	
+fbMachineMessage[3](
+	evtEntry:= TC_EVENTS.Test_EventClass.Test_Message3, 
+	bEvt:= TestMessage[3]);
+	
+fbMachineMessage[4](
+	evtEntry:= TC_EVENTS.Test_EventClass.Test_Message4, 
+	bEvt:= TestMessage[4]);
+	
+fbMachineMessage[5](
+	evtEntry:= TC_EVENTS.Test_EventClass.Test_Message5, 
+	bEvt:= TestMessage[5]);
+	
+fbMachineAlarm[1](
+	evtEntry:= TC_EVENTS.Test_EventClass.PowerInterrupt, 
+	bEvt:= SYS.xFirstScan,
+	bConfirm := SYS.xFaultReset); 
+	
+fbMachineAlarm[2](
+	evtEntry:= TC_EVENTS.Test_EventClass.Test_Event1, 
+	bEvt:= TestAlarm[1],
+	bConfirm := SYS.xFaultReset); 
+	
+fbMachineAlarm[3](
+	evtEntry:= TC_EVENTS.Test_EventClass.Test_Event2, 
+	bEvt:= TestAlarm[2],
+	bConfirm := SYS.xFaultReset); 
+	
+fbMachineAlarm[4](
+	evtEntry:= TC_EVENTS.Test_EventClass.Test_Event3, 
+	bEvt:= TestAlarm[3],
+	bConfirm := SYS.xFaultReset); 
+	
+fbMachineAlarm[5](
+	evtEntry:= TC_EVENTS.Test_EventClass.Test_Event4, 
+	bEvt:= TestAlarm[4],
+	bConfirm := SYS.xFaultReset); ]]></ST>
       </Implementation>
     </Action>
   </POU>
