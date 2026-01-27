@@ -6,8 +6,43 @@
         <o xml:space="preserve" t="GlobalTextListObject">
           <l n="TextList" t="ArrayList" cet="TextListRow">
             <o>
+              <v n="TextID">"481"</v>
+              <v n="TextDefault">" ** Table Displays 80 Alarms, and Overwrites the Oldest"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"566"</v>
+              <v n="TextDefault">" ** The Event Table Displays 80 Alarms, and Overwrites the Oldest"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"60"</v>
+              <v n="TextDefault">" ** The Event Table displays 80 Alarms, and overwrites the oldest"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
               <v n="TextID">"900"</v>
               <v n="TextDefault">"%s"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"882"</v>
+              <v n="TextDefault">"* This Filters incoming Alarms, not currently displayed Alarms."</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"21"</v>
+              <v n="TextDefault">"* This Severity Filters incoming Alarms, not currently displayed Alarms."</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"243"</v>
+              <v n="TextDefault">"*** Only events whose severity is at least as high as the severity specified here are displayed in the event table."</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"652"</v>
+              <v n="TextDefault">"*** Only events whose severity is at least as high as the severity specified here are displayed in the event table.  This does not effect currently displayed events, only incoming."</v>
               <l n="LanguageTexts" t="ArrayList" />
             </o>
             <o>
@@ -56,6 +91,16 @@
               <l n="LanguageTexts" t="ArrayList" />
             </o>
             <o>
+              <v n="TextID">"568"</v>
+              <v n="TextDefault">"Clear"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"27"</v>
+              <v n="TextDefault">"Clear Table"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
               <v n="TextID">"497"</v>
               <v n="TextDefault">"EVENT"</v>
               <l n="LanguageTexts" t="ArrayList" />
@@ -81,6 +126,16 @@
               <l n="LanguageTexts" t="ArrayList" />
             </o>
             <o>
+              <v n="TextID">"837"</v>
+              <v n="TextDefault">"Event Table - This is the recommended control."</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"738"</v>
+              <v n="TextDefault">"Event Table - This is the recommended control.  Table Displays 80 Alarms, and Overwrites the Oldest"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
               <v n="TextID">"994"</v>
               <v n="TextDefault">"Frame Example"</v>
               <l n="LanguageTexts" t="ArrayList" />
@@ -98,6 +153,11 @@
             <o>
               <v n="TextID">"871"</v>
               <v n="TextDefault">"ID"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"140"</v>
+              <v n="TextDefault">"Only events whose severity is at least as high as the severity specified here are displayed in the event table."</v>
               <l n="LanguageTexts" t="ArrayList" />
             </o>
             <o>

@@ -10,7 +10,10 @@ VAR
 	TestAlarm				: ARRAY[1..10] OF BOOL;
 	TestMessage				: ARRAY[1..10] OF BOOL;
 	
-	
+	ClearTable				: BOOL;
+	VisuSeverity			: ARRAY[0..4] OF STRING := ['Verbose', 'Info', 'Warning', 'Error', 'Critical']; // Used in the Visu Combobox
+	Severity				: TcEventSeverity;
+
 	Fault 					: ARRAY [1..100] OF BOOL;
 	fbAlarmLogEvent 		: ARRAY [1..100] OF FB_AlarmLogEvent_TextList; //Alarm Logging Event Handler
 	fbAlarmLogEventTable	: ARRAY [1..100] OF FB_AlarmLogEvent_Table; //Alarm Logging Event Handler
@@ -33,22 +36,28 @@ END_VAR
 
 // HMI Fault PB Passthrough		
 SYS.xFaultReset := HMI.xFaultResetPB;
+
+
 	
 // Twincat Event Logger	
 // The function block enables the events of the TwinCAT 3 EventLogger to be displayed in the visualization element event table. 
 // FB_ReadTc3Events is contained in the VisuElemEventTable library, which is automatically added to the project when the event table is activated
 fbReadEvents(
-	bReadEvents := TRUE,		// This input is used to enable the events to be read.
-	nLanguageID := ,			// Defines which translation of the event text is to be retrieved.
-	eDateAndTimeFormat := ,		// Defines the format of the timestamps. E_DateAndTimeFormat
-	bClearTable := ,			// The event table is cleared via a positive edge at this input. Alarms that were not acknowledged or reset are not removed from the table.
-	eMinSeverity := ,			// Only events whose severity is at least as high as the severity specified here are displayed in the event table.
-	aEvents => ,				// The function block uses this array to make the evaluated events available. The array can store a maximum of 80 messages. If the number of events is large, older messages are overwritten.
-	nNumberOfEvents => ,		// Indicates how many events were triggered.
-	bError => ,					// This output is set if an error occurs when polling or processing the events.
-	hrErrorCode => );			// Indicates the error code of the error that has occurred.
-	
+	bReadEvents := TRUE,										// This input is used to enable the events to be read.
+	nLanguageID := 1033,										// Defines which translation of the event text is to be retrieved. 1033 = English
+	eDateAndTimeFormat := E_DateAndTimeFormat.en_US,			// Defines the format of the timestamps. E_DateAndTimeFormat
+	bClearTable :=	ClearTable,					// The event table is cleared via a positive edge at this input. Alarms that were not acknowledged or reset are not removed from the table.
+	eMinSeverity := Severity,									// Only events whose severity is at least as high as the severity specified here are displayed in the event table.
+	aEvents => ,												// The function block uses this array to make the evaluated events available. The array can store a maximum of 80 messages. If the number of events is large, older messages are overwritten.
+	nNumberOfEvents => ,										// Indicates how many events were triggered.
+	bError => ,													// This output is set if an error occurs when polling or processing the events.
+	hrErrorCode => );											// Indicates the error code of the error that has occurred.
+
 Tc3_EventLogger();
+
+
+
+
 
 // Legacy Alarm List
 A99_Alarms_TextList();
@@ -303,7 +312,96 @@ fbMachineAlarm[4](
 fbMachineAlarm[5](
 	evtEntry:= TC_EVENTS.Test_EventClass.Test_Event4, 
 	bEvt:= TestAlarm[4],
-	bConfirm := SYS.xFaultReset); ]]></ST>
+	bConfirm := SYS.xFaultReset); 
+
+
+// Trigger Several Alarms At Once below.
+// Change Severity in the Event Class	
+	
+fbMachineAlarm[6](
+	evtEntry:= TC_EVENTS.Events._IECCONF_1, 
+	bEvt:= TestAlarm[5],
+	bConfirm := SYS.xFaultReset); 
+	
+fbMachineAlarm[7](
+	evtEntry:= TC_EVENTS.Events._IECCONF_2, 
+	bEvt:= TestAlarm[5],
+	bConfirm := SYS.xFaultReset);
+	
+fbMachineAlarm[8](
+	evtEntry:= TC_EVENTS.Events._IECCONF_3, 
+	bEvt:= TestAlarm[5],
+	bConfirm := SYS.xFaultReset);
+	
+fbMachineAlarm[9](
+	evtEntry:= TC_EVENTS.Events._IECCONF_4, 
+	bEvt:= TestAlarm[5],
+	bConfirm := SYS.xFaultReset);
+	
+fbMachineAlarm[10](
+	evtEntry:= TC_EVENTS.Events._IECCONF_5, 
+	bEvt:= TestAlarm[5],
+	bConfirm := SYS.xFaultReset);
+	
+fbMachineAlarm[11](
+	evtEntry:= TC_EVENTS.Events._IECCONF_6, 
+	bEvt:= TestAlarm[5],
+	bConfirm := SYS.xFaultReset);
+	
+fbMachineAlarm[12](
+	evtEntry:= TC_EVENTS.Events._IECCONF_7, 
+	bEvt:= TestAlarm[5],
+	bConfirm := SYS.xFaultReset);
+	
+fbMachineAlarm[13](
+	evtEntry:= TC_EVENTS.Events._IECCONF_8, 
+	bEvt:= TestAlarm[5],
+	bConfirm := SYS.xFaultReset);
+	
+fbMachineAlarm[14](
+	evtEntry:= TC_EVENTS.Events._IECCONF_9, 
+	bEvt:= TestAlarm[5],
+	bConfirm := SYS.xFaultReset);
+	
+fbMachineAlarm[15](
+	evtEntry:= TC_EVENTS.Events._IECCONF_10, 
+	bEvt:= TestAlarm[5],
+	bConfirm := SYS.xFaultReset);
+	
+fbMachineAlarm[16](
+	evtEntry:= TC_EVENTS.Events._IECCONF_11, 
+	bEvt:= TestAlarm[5],
+	bConfirm := SYS.xFaultReset);
+	
+fbMachineAlarm[17](
+	evtEntry:= TC_EVENTS.Events._IECCONF_12, 
+	bEvt:= TestAlarm[5],
+	bConfirm := SYS.xFaultReset);
+	
+fbMachineAlarm[18](
+	evtEntry:= TC_EVENTS.Events._IECCONF_13, 
+	bEvt:= TestAlarm[5],
+	bConfirm := SYS.xFaultReset);
+	
+fbMachineAlarm[19](
+	evtEntry:= TC_EVENTS.Events._IECCONF_14, 
+	bEvt:= TestAlarm[5],
+	bConfirm := SYS.xFaultReset);
+	
+fbMachineAlarm[20](
+	evtEntry:= TC_EVENTS.Events._IECCONF_15, 
+	bEvt:= TestAlarm[5],
+	bConfirm := SYS.xFaultReset);
+	
+fbMachineAlarm[21](
+	evtEntry:= TC_EVENTS.Events._IECCONF_16, 
+	bEvt:= TestAlarm[5],
+	bConfirm := SYS.xFaultReset);
+	
+fbMachineAlarm[22](
+	evtEntry:= TC_EVENTS.Events._IECCONF_17, 
+	bEvt:= TestAlarm[5],
+	bConfirm := SYS.xFaultReset);]]></ST>
       </Implementation>
     </Action>
   </POU>

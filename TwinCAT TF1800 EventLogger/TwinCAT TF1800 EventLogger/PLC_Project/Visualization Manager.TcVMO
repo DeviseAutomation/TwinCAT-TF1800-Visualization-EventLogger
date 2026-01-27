@@ -22,7 +22,7 @@
             <v n="FileTransferMode">true</v>
             <v n="VisuStyle">"Flat style, 3.1.9.0 (Beckhoff Automation GmbH)"</v>
             <v n="MaxNumOfClients">100</v>
-            <n n="Language" />
+            <v n="Language">"en_US"</v>
             <v n="NumpadDialog">"VisuDialogs.Numpad"</v>
             <v n="KeypadDialog">"VisuDialogs.Keypad"</v>
             <v n="InputWithLimitsDialog">"VisuDialogs.TextinputWithLimits"</v>
@@ -529,7 +529,123 @@
           <v n="UseLocalUserMgmt">true</v>
           <v n="UseUserMgmtInPlc">true</v>
           <n n="RemoteUserMgmtPath" />
-          <n n="FontsConfig" />
+          <o n="FontsConfig" t="LanguageFontsConfiguration">
+            <v n="DisplayedFontRows" t="Int16">-1</v>
+            <d2 n="Configuration" ckt="String" cvt="SingleLanguageFont">
+              <v>de</v>
+              <o>
+                <v n="Language">"de"</v>
+                <n n="Fontname" />
+                <n n="AdditionalFonts" />
+                <v n="SizeFactor" t="Single">1</v>
+              </o>
+              <v>en</v>
+              <o>
+                <v n="Language">"en"</v>
+                <n n="Fontname" />
+                <n n="AdditionalFonts" />
+                <v n="SizeFactor" t="Single">1</v>
+              </o>
+              <v>en_US</v>
+              <o>
+                <v n="Language">"en_US"</v>
+                <v n="Fontname">""</v>
+                <n n="AdditionalFonts" />
+                <v n="SizeFactor" t="Single">1</v>
+              </o>
+              <v>English</v>
+              <o>
+                <v n="Language">"English"</v>
+                <n n="Fontname" />
+                <n n="AdditionalFonts" />
+                <v n="SizeFactor" t="Single">1</v>
+              </o>
+              <v>es</v>
+              <o>
+                <v n="Language">"es"</v>
+                <n n="Fontname" />
+                <n n="AdditionalFonts" />
+                <v n="SizeFactor" t="Single">1</v>
+              </o>
+              <v>fr</v>
+              <o>
+                <v n="Language">"fr"</v>
+                <n n="Fontname" />
+                <n n="AdditionalFonts" />
+                <v n="SizeFactor" t="Single">1</v>
+              </o>
+              <v>French</v>
+              <o>
+                <v n="Language">"French"</v>
+                <n n="Fontname" />
+                <n n="AdditionalFonts" />
+                <v n="SizeFactor" t="Single">1</v>
+              </o>
+              <v>German</v>
+              <o>
+                <v n="Language">"German"</v>
+                <n n="Fontname" />
+                <n n="AdditionalFonts" />
+                <v n="SizeFactor" t="Single">1</v>
+              </o>
+              <v>it</v>
+              <o>
+                <v n="Language">"it"</v>
+                <n n="Fontname" />
+                <n n="AdditionalFonts" />
+                <v n="SizeFactor" t="Single">1</v>
+              </o>
+              <v>Italian</v>
+              <o>
+                <v n="Language">"Italian"</v>
+                <n n="Fontname" />
+                <n n="AdditionalFonts" />
+                <v n="SizeFactor" t="Single">1</v>
+              </o>
+              <v>ja</v>
+              <o>
+                <v n="Language">"ja"</v>
+                <n n="Fontname" />
+                <n n="AdditionalFonts" />
+                <v n="SizeFactor" t="Single">1</v>
+              </o>
+              <v>pt-BR</v>
+              <o>
+                <v n="Language">"pt-BR"</v>
+                <n n="Fontname" />
+                <n n="AdditionalFonts" />
+                <v n="SizeFactor" t="Single">1</v>
+              </o>
+              <v>ru</v>
+              <o>
+                <v n="Language">"ru"</v>
+                <n n="Fontname" />
+                <n n="AdditionalFonts" />
+                <v n="SizeFactor" t="Single">1</v>
+              </o>
+              <v>Spanish</v>
+              <o>
+                <v n="Language">"Spanish"</v>
+                <n n="Fontname" />
+                <n n="AdditionalFonts" />
+                <v n="SizeFactor" t="Single">1</v>
+              </o>
+              <v>tr</v>
+              <o>
+                <v n="Language">"tr"</v>
+                <n n="Fontname" />
+                <n n="AdditionalFonts" />
+                <v n="SizeFactor" t="Single">1</v>
+              </o>
+              <v>zh-CHS</v>
+              <o>
+                <v n="Language">"zh-CHS"</v>
+                <n n="Fontname" />
+                <n n="AdditionalFonts" />
+                <v n="SizeFactor" t="Single">1</v>
+              </o>
+            </d2>
+          </o>
           <n n="FontDownloadConfig" />
           <n n="VisuInitializationCode" />
           <n n="FontSettings" />
@@ -577,9 +693,13 @@
         <Type n="GlobalOpenNumpadKeypadType">{550f8ee0-c42e-42f0-b253-4fadf0c12bdf}</Type>
         <Type n="Guid">System.Guid</Type>
         <Type n="HotkeyConfiguration">{6b108d46-58af-4e41-a3f4-174d8f160cc4}</Type>
+        <Type n="Int16">System.Int16</Type>
         <Type n="Int32">System.Int32</Type>
         <Type n="Int64">System.Int64</Type>
+        <Type n="LanguageFontsConfiguration">{53e05a3b-2498-44d0-afdc-eaa7f08e78a1}</Type>
         <Type n="OverlaySupport">{05125339-dc8c-4673-b403-e21bec548370}</Type>
+        <Type n="Single">System.Single</Type>
+        <Type n="SingleLanguageFont">{3ce8bc11-ba9f-4be6-831b-d41efa3289a1}</Type>
         <Type n="String">System.String</Type>
         <Type n="UnicodeSupport">{19611221-ebd3-4607-86d2-9822fbe84c30}</Type>
         <Type n="VisualClientSizeMode">{c37fe731-4f69-4d98-82fe-4f9aefbe200d}</Type>

@@ -2,7 +2,7 @@
 <TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4026.19">
 	<DataTypes>
 		<DataType>
-			<Name GUID="{D59211A5-38A9-4B23-B6EF-804271F46B6E}" PersistentType="true">Test_EventClass</Name>
+			<Name GUID="{9DEA69A7-CA0D-49D9-90BB-2FDF515FED86}" PersistentType="true">Test_EventClass</Name>
 			<DisplayName TxtId=""><![CDATA[NewEventClass_DisplayText]]></DisplayName>
 			<EventId>
 				<Name Id="1">PowerInterrupt</Name>
@@ -66,6 +66,418 @@
 				<Hide GUID="{BFA21397-0CFD-452C-908B-C2987803C6D7}"/>
 				<Hide GUID="{65E6FA1C-DC61-467A-9736-5E8C21D2C6B2}"/>
 				<Hide GUID="{DABE1413-17B2-4F7E-BA1F-20AA12B12CEF}"/>
+				<Hide GUID="{D59211A5-38A9-4B23-B6EF-804271F46B6E}"/>
+			</Hides>
+		</DataType>
+		<DataType>
+			<Name GUID="{3D168073-A56A-4191-9E91-C37B6196C537}" PersistentType="true">Events</Name>
+			<DisplayName TxtId=""><![CDATA[EventTesting]]></DisplayName>
+			<EventId>
+				<Name Id="1">__1</Name>
+				<DisplayName TxtId=""><![CDATA[1]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="2">__2</Name>
+				<DisplayName TxtId=""><![CDATA[2]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="3">__3</Name>
+				<DisplayName TxtId=""><![CDATA[3]]></DisplayName>
+				<Severity>Verbose</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="4">__4</Name>
+				<DisplayName TxtId=""><![CDATA[4]]></DisplayName>
+				<Severity>Verbose</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="5">__5</Name>
+				<DisplayName TxtId=""><![CDATA[5]]></DisplayName>
+				<Severity>Verbose</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="6">__6</Name>
+				<DisplayName TxtId=""><![CDATA[6]]></DisplayName>
+				<Severity>Verbose</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="7">__7</Name>
+				<DisplayName TxtId=""><![CDATA[7]]></DisplayName>
+				<Severity>Verbose</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="8">__8</Name>
+				<DisplayName TxtId=""><![CDATA[8]]></DisplayName>
+				<Severity>Verbose</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="9">__9</Name>
+				<DisplayName TxtId=""><![CDATA[9]]></DisplayName>
+				<Severity>Verbose</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="10">__10</Name>
+				<DisplayName TxtId=""><![CDATA[10]]></DisplayName>
+				<Severity>Verbose</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="11">__11</Name>
+				<DisplayName TxtId=""><![CDATA[11]]></DisplayName>
+				<Severity>Verbose</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="12">__12</Name>
+				<DisplayName TxtId=""><![CDATA[12]]></DisplayName>
+				<Severity>Verbose</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="13">__13</Name>
+				<DisplayName TxtId=""><![CDATA[13]]></DisplayName>
+				<Severity>Verbose</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="14">__14</Name>
+				<DisplayName TxtId=""><![CDATA[14]]></DisplayName>
+				<Severity>Verbose</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="15">__15</Name>
+				<DisplayName TxtId=""><![CDATA[15]]></DisplayName>
+				<Severity>Verbose</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="16">__16</Name>
+				<DisplayName TxtId=""><![CDATA[16]]></DisplayName>
+				<Severity>Verbose</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="17">__17</Name>
+				<DisplayName TxtId=""><![CDATA[17]]></DisplayName>
+				<Severity>Verbose</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="18">__18</Name>
+				<DisplayName TxtId=""><![CDATA[18]]></DisplayName>
+				<Severity>Verbose</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="19">__19</Name>
+				<DisplayName TxtId=""><![CDATA[19]]></DisplayName>
+				<Severity>Verbose</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="20">__20</Name>
+				<DisplayName TxtId=""><![CDATA[20]]></DisplayName>
+				<Severity>Verbose</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="21">__21</Name>
+				<DisplayName TxtId=""><![CDATA[21]]></DisplayName>
+				<Severity>Verbose</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="22">__22</Name>
+				<DisplayName TxtId=""><![CDATA[22]]></DisplayName>
+				<Severity>Verbose</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="23">__23</Name>
+				<DisplayName TxtId=""><![CDATA[23]]></DisplayName>
+				<Severity>Verbose</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="24">__24</Name>
+				<DisplayName TxtId=""><![CDATA[24]]></DisplayName>
+				<Severity>Verbose</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="25">__25</Name>
+				<DisplayName TxtId=""><![CDATA[25]]></DisplayName>
+				<Severity>Verbose</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="26">__26</Name>
+				<DisplayName TxtId=""><![CDATA[26]]></DisplayName>
+				<Severity>Verbose</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="27">__27</Name>
+				<DisplayName TxtId=""><![CDATA[27]]></DisplayName>
+				<Severity>Verbose</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="28">__28</Name>
+				<DisplayName TxtId=""><![CDATA[28]]></DisplayName>
+				<Severity>Verbose</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="29">__29</Name>
+				<DisplayName TxtId=""><![CDATA[29]]></DisplayName>
+				<Severity>Verbose</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="30">__30</Name>
+				<DisplayName TxtId=""><![CDATA[30]]></DisplayName>
+				<Severity>Verbose</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="31">__31</Name>
+				<DisplayName TxtId=""><![CDATA[31]]></DisplayName>
+				<Severity>Verbose</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="32">__32</Name>
+				<DisplayName TxtId=""><![CDATA[32]]></DisplayName>
+				<Severity>Verbose</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="33">__33</Name>
+				<DisplayName TxtId=""><![CDATA[33]]></DisplayName>
+				<Severity>Verbose</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="34">__34</Name>
+				<DisplayName TxtId=""><![CDATA[34]]></DisplayName>
+				<Severity>Verbose</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="35">__35</Name>
+				<DisplayName TxtId=""><![CDATA[35]]></DisplayName>
+				<Severity>Verbose</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="36">__36</Name>
+				<DisplayName TxtId=""><![CDATA[36]]></DisplayName>
+				<Severity>Verbose</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="37">__37</Name>
+				<DisplayName TxtId=""><![CDATA[37]]></DisplayName>
+				<Severity>Verbose</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="38">__38</Name>
+				<DisplayName TxtId=""><![CDATA[38]]></DisplayName>
+				<Severity>Verbose</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="39">__39</Name>
+				<DisplayName TxtId=""><![CDATA[39]]></DisplayName>
+				<Severity>Verbose</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="40">__40</Name>
+				<DisplayName TxtId=""><![CDATA[40]]></DisplayName>
+				<Severity>Verbose</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="41">__41</Name>
+				<DisplayName TxtId=""><![CDATA[41]]></DisplayName>
+				<Severity>Verbose</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="42">__42</Name>
+				<DisplayName TxtId=""><![CDATA[42]]></DisplayName>
+				<Severity>Verbose</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="43">__43</Name>
+				<DisplayName TxtId=""><![CDATA[43]]></DisplayName>
+				<Severity>Verbose</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="44">__44</Name>
+				<DisplayName TxtId=""><![CDATA[44]]></DisplayName>
+				<Severity>Verbose</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="45">__45</Name>
+				<DisplayName TxtId=""><![CDATA[45]]></DisplayName>
+				<Severity>Verbose</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="46">__46</Name>
+				<DisplayName TxtId=""><![CDATA[46]]></DisplayName>
+				<Severity>Verbose</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="47">__47</Name>
+				<DisplayName TxtId=""><![CDATA[47]]></DisplayName>
+				<Severity>Verbose</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="48">__48</Name>
+				<DisplayName TxtId=""><![CDATA[48]]></DisplayName>
+				<Severity>Verbose</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="49">__49</Name>
+				<DisplayName TxtId=""><![CDATA[49]]></DisplayName>
+				<Severity>Verbose</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="50">__50</Name>
+				<DisplayName TxtId=""><![CDATA[50]]></DisplayName>
+				<Severity>Verbose</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="51">__51</Name>
+				<DisplayName TxtId=""><![CDATA[51]]></DisplayName>
+				<Severity>Verbose</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="52">__52</Name>
+				<DisplayName TxtId=""><![CDATA[52]]></DisplayName>
+				<Severity>Verbose</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="53">__53</Name>
+				<DisplayName TxtId=""><![CDATA[53]]></DisplayName>
+				<Severity>Verbose</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="54">__54</Name>
+				<DisplayName TxtId=""><![CDATA[54]]></DisplayName>
+				<Severity>Verbose</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="55">__55</Name>
+				<DisplayName TxtId=""><![CDATA[55]]></DisplayName>
+				<Severity>Verbose</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="56">__56</Name>
+				<DisplayName TxtId=""><![CDATA[56]]></DisplayName>
+				<Severity>Verbose</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="57">__57</Name>
+				<DisplayName TxtId=""><![CDATA[57]]></DisplayName>
+				<Severity>Verbose</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="58">__58</Name>
+				<DisplayName TxtId=""><![CDATA[58]]></DisplayName>
+				<Severity>Verbose</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="59">__59</Name>
+				<DisplayName TxtId=""><![CDATA[59]]></DisplayName>
+				<Severity>Verbose</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="60">__60</Name>
+				<DisplayName TxtId=""><![CDATA[60]]></DisplayName>
+				<Severity>Verbose</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="61">__61</Name>
+				<DisplayName TxtId=""><![CDATA[61]]></DisplayName>
+				<Severity>Verbose</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="62">__62</Name>
+				<DisplayName TxtId=""><![CDATA[62]]></DisplayName>
+				<Severity>Verbose</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="63">__63</Name>
+				<DisplayName TxtId=""><![CDATA[63]]></DisplayName>
+				<Severity>Verbose</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="64">__64</Name>
+				<DisplayName TxtId=""><![CDATA[64]]></DisplayName>
+				<Severity>Verbose</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="65">__65</Name>
+				<DisplayName TxtId=""><![CDATA[65]]></DisplayName>
+				<Severity>Verbose</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="66">__66</Name>
+				<DisplayName TxtId=""><![CDATA[66]]></DisplayName>
+				<Severity>Verbose</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="67">__67</Name>
+				<DisplayName TxtId=""><![CDATA[67]]></DisplayName>
+				<Severity>Verbose</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="68">__68</Name>
+				<DisplayName TxtId=""><![CDATA[68]]></DisplayName>
+				<Severity>Verbose</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="69">__69</Name>
+				<DisplayName TxtId=""><![CDATA[69]]></DisplayName>
+				<Severity>Verbose</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="70">__70</Name>
+				<DisplayName TxtId=""><![CDATA[70]]></DisplayName>
+				<Severity>Verbose</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="71">__71</Name>
+				<DisplayName TxtId=""><![CDATA[71]]></DisplayName>
+				<Severity>Verbose</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="72">__72</Name>
+				<DisplayName TxtId=""><![CDATA[72]]></DisplayName>
+				<Severity>Verbose</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="73">__73</Name>
+				<DisplayName TxtId=""><![CDATA[73]]></DisplayName>
+				<Severity>Verbose</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="74">__74</Name>
+				<DisplayName TxtId=""><![CDATA[74]]></DisplayName>
+				<Severity>Verbose</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="75">__75</Name>
+				<DisplayName TxtId=""><![CDATA[75]]></DisplayName>
+				<Severity>Verbose</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="76">__76</Name>
+				<DisplayName TxtId=""><![CDATA[76]]></DisplayName>
+				<Severity>Verbose</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="77">__77</Name>
+				<DisplayName TxtId=""><![CDATA[77]]></DisplayName>
+				<Severity>Verbose</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="78">__78</Name>
+				<DisplayName TxtId=""><![CDATA[78]]></DisplayName>
+				<Severity>Verbose</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="79">__79</Name>
+				<DisplayName TxtId=""><![CDATA[79]]></DisplayName>
+				<Severity>Verbose</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="80">__80</Name>
+				<DisplayName TxtId=""><![CDATA[80]]></DisplayName>
+				<Severity>Verbose</Severity>
+			</EventId>
+			<Hides>
+				<Hide GUID="{814F242F-D611-4797-A528-A9F139997479}"/>
+				<Hide GUID="{5B81603C-AE5D-41B2-B6FB-BE4FA366170B}"/>
+				<Hide GUID="{A0E6A755-ADDA-4824-8E93-A1EE397DF0B9}"/>
+				<Hide GUID="{91848258-6EBB-4E20-B1B1-58FA5F06ABEB}"/>
+				<Hide GUID="{B20F46D0-56BD-4BAF-897F-98FAE29783F6}"/>
 			</Hides>
 		</DataType>
 	</DataTypes>
@@ -82,7 +494,7 @@
 		</System>
 		<Plc>
 			<Project GUID="{81D02545-4A25-4D69-AC35-52FA7873E322}" Name="PLC_Project" PrjFilePath="PLC_Project\PLC_Project.plcproj" TmcFilePath="PLC_Project\PLC_Project.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcHash="{5C9C596F-84E3-2CD0-B7B9-749CD049246B}" TmcPath="PLC_Project\PLC_Project.tmc">
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcHash="{D13AAFB1-4454-C2A4-E997-34A9517514BF}" TmcPath="PLC_Project\PLC_Project.tmc">
 					<Name>PLC_Project Instance</Name>
 					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 					<Vars VarGrpType="1">
